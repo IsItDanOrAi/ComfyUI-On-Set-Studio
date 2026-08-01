@@ -1,19 +1,19 @@
 <!--
-  >>> IMAGE <<< markers show where visuals go. The hero one matters most —
-  it sells the tool before a single line is read. A feature reel here would
-  do more than any paragraph.
+  >>> IMAGE <<< markers show where visuals go. The hero one matters most.
+  It sells the tool before a single line is read, and a feature reel there
+  would do more than any paragraph.
 -->
 
 # On-Set Studio
 
 ### Don't let AI imagine your shot. Build it.
 
-**A virtual soundstage for AI image, video, and asset creation — built for ComfyUI.**
+**A virtual soundstage for AI image, video, and asset creation, built for ComfyUI.**
 
 On-Set Studio is a browser-based 3D staging tool that runs as a ComfyUI custom
-node. You build the shot the way you'd build it on a set — block your cast,
-rig your lights, choose a lens, move the camera — and it hands ComfyUI the
-ground truth of the scene you actually built.
+node. You build the shot the way you'd build it on a set. Block your cast, rig
+your lights, choose a lens, move the camera. Then it hands ComfyUI the ground
+truth of the scene you actually built.
 
 >>> HERO IMAGE / GIF: the editor with a lit, posed scene + the passes it exports <<<
 
@@ -21,20 +21,20 @@ ground truth of the scene you actually built.
 
 ## Why it exists
 
-Generative AI gets called slop, and often that's fair — because "a dog" typed
+Generative AI gets called slop, and often that's fair, because "a dog" typed
 into a box gives you *someone's* dog, not yours. No direction. No control. No
 authorship.
 
-Garbage in, garbage out. Most workflows start from the weakest possible
-input — a sentence — and then fight the results downstream. On-Set Studio
-attacks the other end: **improve the output by improving the input.**
+Garbage in, garbage out. Most workflows start from the weakest possible input,
+a single sentence, and then fight the results downstream. On-Set Studio attacks
+the other end: **improve the output by improving the input.**
 
 This is the **A** in an A-to-B pipeline. Previsualization, image-to-image,
-image-to-video, video-to-video — whatever comes next in your workflow, this is
+image-to-video, video-to-video, whatever comes next in your workflow, this is
 where the shot gets decided instead of discovered. Your blocking. Your
 lighting. Your lens. Your camera move.
 
->>> IMAGE: side-by-side — the staged scene in the editor → the generated result <<<
+>>> IMAGE: side-by-side, the staged scene in the editor → the generated result <<<
 
 ## Why not just use Blender or Unreal?
 
@@ -42,7 +42,7 @@ You can. They're extraordinarily powerful, they'll do everything here and far
 more, and if you already live in one of them, use it.
 
 But power isn't the same as fit. Using a full 3D suite to stage a single
-ComfyUI shot is like running a language model to spell-check a sentence — it
+ComfyUI shot is like running a language model to spell-check a sentence. It
 works, it works beautifully, and it's a great deal more machine than the job
 asked for. There's also a gap neither one closes: getting a staged scene *out*
 of a production suite and *into* a ComfyUI workflow is a pipeline you build
@@ -55,7 +55,7 @@ learning curve in front of it.
 ## A toolbox, not a checklist
 
 This is a director's playground, not one fixed workflow. Not every tool fits
-every shot — that's the point. Take the pose pass for one job, depth and a
+every shot, and that's the point. Take the pose pass for one job, depth and a
 character matte for another, the BBOX data when your model uses it, the raw
 render when that's all you need.
 
@@ -76,15 +76,15 @@ controlled.
 **Animate**
 A full timeline with pose keyframes and interpolation, multi-clip sequencing
 with gap tweening, and path tracking along spline curves. Conventional,
-dependable animation tools — keyframe it yourself, or generate it (see below).
+dependable animation tools. Keyframe it yourself, or generate it (see below).
 
 **Light it for real**
 Rig-mounted light modules, classic portrait lighting presets, physical bounce
 reflectors with real incident-light behavior, and beam-shaping modifiers. Light
-that behaves like light — not a prompt asking for "cinematic lighting."
+that behaves like light, not a prompt asking for "cinematic lighting."
 
 **Work the camera**
-A track-based camera rig — lay a track, then move the camera along it with real
+A track-based camera rig. Lay a track, then move the camera along it with real
 lens, roll, and spin controls. Shift between lens types *mid-move*, set
 tracking markers along the track, and have the camera track a subject or a
 specific body part as it travels. A head-tracking and eyeline system keeps your
@@ -93,45 +93,45 @@ subject's gaze where you want it. Multi-camera view finder for coverage.
 **Build the set**
 Import your own FBX / OBJ / GLB objects, or create primitive 3D shapes in the
 tool. Every object carries its own path system and its own BBOX data, and can
-be attached to a character's bones — a prop that travels with the hand that
-holds it. The same system handles a coffee cup in an actor's grip and a car
-tearing along a track through the frame. Add Gaussian-splat scenes or the
-LED-volume / 360° backdrop system for environments.
+be attached to a character's bones, so a prop travels with the hand that holds
+it. The same system handles a coffee cup in an actor's grip and a car tearing
+along a track through the frame. Add Gaussian-splat scenes or the LED-volume /
+360° backdrop system for environments.
 
 **Shoot against green (or blue, or black, or white)**
 Built-in backdrop modes for clean keying and compositing downstream, in the
 color that suits your pipeline.
 
 **Send it to ComfyUI**
-One button pushes the whole payload — every pass and every JSON structure —
+One button pushes the whole payload, every pass and every JSON structure,
 straight into your ComfyUI workflow.
 
 ---
 
-## Generate original motion — ARDY integration
+## Generate original motion: ARDY integration
 
 >>> GIF: text prompt → generated animation on a character <<<
 
-On-Set Studio integrates **[ARDY](https://github.com/nv-tlabs/ardy)** —
-NVIDIA's autoregressive motion diffusion model, published at
-[SIGGRAPH 2026](https://research.nvidia.com/labs/sil/projects/ardy/) — directly
+On-Set Studio integrates **[ARDY](https://github.com/nv-tlabs/ardy)**, NVIDIA's
+autoregressive motion diffusion model, published at
+[SIGGRAPH 2026](https://research.nvidia.com/labs/sil/projects/ardy/), directly
 into the editor. Describe a movement in text and get original animation
 generated and retargeted onto your character's rig. No motion library, no
 mocap, no hunting for a clip that almost works.
 
 It's the piece most people haven't seen yet, in or out of the ComfyUI world:
 
-- **Text to motion** — describe it, generate it, apply it to your character
+- **Text to motion.** Describe it, generate it, apply it to your character
 - **Retargeted automatically** onto the Mixamo skeleton, with FK validation
 - **Sequence and tween** generated clips together, and blend them with your own
   keyframed animation
-- **Driven by your scene** — ARDY supports kinematic constraints (paths,
+- **Driven by your scene.** ARDY supports kinematic constraints (paths,
   waypoints, keyframes); On-Set Studio wires *your* set into them, so a
   generated performance can follow a path you drew and engage with objects you
   placed, instead of playing out in isolation
 
 **Entirely optional.** ARDY runs as a separate local service and wants real
-hardware — roughly 14 GB of VRAM with the model loaded (it frees on request so
+hardware, roughly 14 GB of VRAM with the model loaded (it frees on request so
 ComfyUI can have the card back). If you'd rather keyframe by hand, every
 conventional animation tool above works without it. It's an addition to the
 toolbox, not a dependency.
@@ -141,37 +141,37 @@ toolbox, not a dependency.
 ## What it outputs
 
 Every pass renders from the same camera and framing, so they align exactly for
-masking and compositing — no re-registration, no drift.
+masking and compositing. No re-registration, no drift.
 
 **Images**
 - The rendered scene
-- A dynamic control-map system — depth, normal, and canny — with multiple
+- A dynamic control-map system covering depth, normal, and canny, with multiple
   depth-pass types (full scene, character-only, environment-only) so you can
   choose the map that serves the shot instead of forcing one map to do every
   job
-- **Character ID mattes** — a flat, unshaded color per character for clean
+- **Character ID mattes.** A flat, unshaded color per character for clean
   regional masking
-- **OpenPose skeletons** — see below
+- **OpenPose skeletons** (see below)
 - Gaussian-splat masks for true character-vs-backdrop occlusion
 
 **Data**
-- **BBOX data** — bounding boxes projected into frame space for the models and
+- **BBOX data.** Bounding boxes projected into frame space for the models and
   workflows that use spatial conditioning. They're generated automatically and
-  follow the subject as it moves, and you control what gets boxed — the whole
+  follow the subject as it moves, and you control what gets boxed: the whole
   character, or specific regions you care about. Nothing to draw by hand.
-- **Structured JSON** — per-character, environment, scene, and pose data, with
+- **Structured JSON.** Per-character, environment, scene, and pose data, with
   cinematographic scaffolding (depth planes, motivated light sources, framing)
 
 ### About the pose output
 
-This isn't an OpenPose editor. You pose a **Mixamo rig** — a real skeleton with
-proper joints, IK, and hand control — and On-Set Studio converts that into a
+This isn't an OpenPose editor. You pose a **Mixamo rig**, a real skeleton with
+proper joints, IK, and hand control, and On-Set Studio converts that into a
 standard OpenPose control image on export.
 
 You get the control of a production rig and the compatibility of the format
 ComfyUI already speaks. No trade.
 
->>> IMAGE: contact sheet — render / depth / normal / ID matte / pose / green screen <<<
+>>> IMAGE: contact sheet, render / depth / normal / ID matte / pose / green screen <<<
 
 ---
 
@@ -183,7 +183,7 @@ ComfyUI already speaks. No trade.
    up with `...\ComfyUI\custom_nodes\ComfyUI-On-Set-Studio\`.
 2. Restart ComfyUI. The **On-Set Studio** node appears in your node list, with
    an **Open On-Set UI** button that launches the editor in a new browser tab.
-3. Add a character (below) — the editor opens to an empty stage until you do.
+3. Add a character (below). The editor opens to an empty stage until you do.
 
 The editor ships prebuilt, so there's nothing to compile. You only need the
 build steps if you're modifying the source (see **Building for development**).
@@ -191,7 +191,7 @@ build steps if you're modifying the source (see **Building for development**).
 ### You'll need a character model
 
 **On-Set Studio does not ship with a character.** Mixamo's models are Adobe's
-to distribute, not mine, so you'll download your own — it takes a minute:
+to distribute, not mine, so you'll download your own. It takes a minute:
 
 1. Go to [mixamo.com](https://www.mixamo.com) and sign in with a free Adobe
    account.
@@ -210,12 +210,12 @@ through Mixamo's auto-rigger.
 
 ### Optional: ARDY motion generation
 
-Text-to-motion runs as a separate local service, so it's entirely opt-in — skip
+Text-to-motion runs as a separate local service, so it's entirely opt-in. Skip
 this if you're keyframing by hand.
 
 **1. Install ARDY.** Follow NVIDIA's instructions at
 [github.com/nv-tlabs/ardy](https://github.com/nv-tlabs/ardy), including the
-model checkpoints. *Note: NVIDIA tests ARDY on Ubuntu 22.04 — it runs on
+model checkpoints. *Note: NVIDIA tests ARDY on Ubuntu 22.04. It runs on
 Windows, but you're off their tested path, so expect to solve a dependency or
 two.* This guide assumes you installed it to `C:\dev\ardy`.
 
@@ -248,7 +248,7 @@ ComfyUI can have the GPU back between generations.
 
 ## Building for development
 
-**You don't need this to use On-Set Studio** — the editor ships prebuilt. This
+**You don't need this to use On-Set Studio.** The editor ships prebuilt. This
 is for modifying the source.
 
 The editor is a Vite + React + TypeScript app built on three.js.
@@ -257,22 +257,22 @@ The editor is a Vite + React + TypeScript app built on three.js.
 npm install
 npm run dev        # local dev server with hot reload
 
-# production build — must use this exact base, see the naming
+# production build. Must use this exact base; see the naming
 # contract in nodes.py:
 npx vite build --base=/on-set-studio/app/
 ```
 
 Then replace the node's `editor_dist/` folder with the contents of `dist/`.
-Delete the whole old folder rather than merging into it — stale files from a
+Delete the whole old folder rather than merging into it. Stale files from a
 previous build will otherwise be served alongside the new ones.
 
-`npm install` pulls every dependency at the correct version — nothing to
-install or update by hand.
+`npm install` pulls every dependency at the correct version, so there's nothing
+to install or update by hand.
 
 ## Requirements
 
 - A working [ComfyUI](https://github.com/comfyanonymous/ComfyUI) install
-- A reasonably modern GPU — this is a real-time 3D editor running in a browser
+- A reasonably modern GPU (this is a real-time 3D editor running in a browser)
 - *Optional:* Node.js, only if you want to build from source
 - A Mixamo-rigged FBX character (see above)
 - *Optional:* additional VRAM if you want to run ARDY motion generation
@@ -282,13 +282,13 @@ install or update by hand.
 ## Status
 
 On-Set Studio is in active development and moving fast. It's a working toolset
-built by one person (hi), not a finished commercial product — expect sharp
+built by one person (hi), not a finished commercial product. Expect sharp
 edges, and expect it to keep growing.
 
 ## Support this project
 
 On-Set Studio is free and open, and it's developed by one person. Donations are
-what keep that development going — if the tool earns a place in your workflow,
+what keep that development going. If the tool earns a place in your workflow,
 supporting it directly buys the time to keep building it.
 
 >>> DONATE / BUY ME A COFFEE LINK <<<
@@ -304,14 +304,14 @@ Created and maintained by **Dan Oravasaari**.
 
 Built on the foundation of
 [**3D Openpose Editor**](https://github.com/ZhUyU1997/open-pose-editor) by
-**yzhu (Yu Zhu)** — sincere thanks to the original project.
+**yzhu (Yu Zhu)**. Sincere thanks to the original project.
 
 Motion generation is powered by [**ARDY**](https://github.com/nv-tlabs/ardy)
-from NVIDIA (Zhao, Petrovich, Zhang, Wang, Tang, and Rempe — SIGGRAPH 2026).
+from NVIDIA (Zhao, Petrovich, Zhang, Wang, Tang, and Rempe, SIGGRAPH 2026).
 ARDY's inference code is Apache-2.0 and its model weights are released under
 the NVIDIA Open Model License; check the model download pages for the terms
 that apply to the checkpoints you use. ARDY is not distributed with this
-project — you install it yourself.
+project. You install it yourself.
 
 Mixamo is a service of Adobe Inc. On-Set Studio works with Mixamo-rigged
 characters but is not affiliated with, endorsed by, or sponsored by Adobe. No
@@ -319,5 +319,5 @@ Adobe assets are distributed with this project.
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Original work © 2021 yzhu; On-Set Studio
+MIT. See [LICENSE](LICENSE). Original work © 2021 yzhu; On-Set Studio
 additions © 2026 Dan Oravasaari.
