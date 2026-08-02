@@ -4,6 +4,9 @@
   would do more than any paragraph.
 -->
 
+<img width="2560" height="800" alt="On-Set Studio Banner" src="https://github.com/user-attachments/assets/3c995d56-af26-41bf-aefb-32ff84b8ecec" />
+
+
 # On-Set Studio
 
 ### Don't let AI imagine your shot. Build it.
