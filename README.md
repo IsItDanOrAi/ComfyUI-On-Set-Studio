@@ -18,7 +18,7 @@ node. You build the shot the way you'd build it on a set. Block your cast, rig
 your lights, choose a lens, move the camera. Then it hands ComfyUI the ground
 truth of the scene you actually built.
 
->>> HERO IMAGE / GIF: the editor with a lit, posed scene + the passes it exports <<<
+<img width="850" height="275" alt="Banner1-850x275" src="https://github.com/user-attachments/assets/04232b41-0093-4906-812f-f5936db6c052" />
 
 ---
 
