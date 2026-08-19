@@ -234,6 +234,10 @@ through Mixamo's auto-rigger.
 
 ### Optional: ARDY motion generation
 
+<div align="center">
+<img width="655" height="275" alt="ARDY v3" src="https://github.com/user-attachments/assets/b75116d5-e80c-4baf-9162-dade39102d6d" />
+</div>
+
 Text-to-motion runs as a separate local service, so it's entirely opt-in. Skip
 this if you're keyframing by hand.
 
