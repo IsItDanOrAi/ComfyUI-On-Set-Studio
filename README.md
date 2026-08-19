@@ -134,7 +134,10 @@ straight into your ComfyUI workflow.
 
 ## Generate original motion, ARDY integration
 
->>> GIF: text prompt to generated animation on a character <<<
+<div align="center">
+<img width="850" height="275" alt="ARDY v5" src="https://github.com/user-attachments/assets/7d86bfb2-2281-47e7-9be9-deb5bfe68239" />
+</div>
+
 
 On-Set Studio integrates **[ARDY](https://github.com/nv-tlabs/ardy)**, NVIDIA's
 autoregressive motion diffusion model, published at
@@ -233,10 +236,6 @@ Any Mixamo-rigged FBX will work, including your own custom characters run
 through Mixamo's auto-rigger.
 
 ### Optional: ARDY motion generation
-
-<div align="center">
-<img width="655" height="275" alt="ARDY v3" src="https://github.com/user-attachments/assets/b75116d5-e80c-4baf-9162-dade39102d6d" />
-</div>
 
 Text-to-motion runs as a separate local service, so it's entirely opt-in. Skip
 this if you're keyframing by hand.
