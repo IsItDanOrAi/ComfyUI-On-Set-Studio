@@ -1,10 +1,4 @@
-<!--
-  >>> IMAGE <<< markers show where visuals go. The hero one matters most,
-  since it sells the tool before a single line is read. A feature reel here
-  would do more than any paragraph.
-
-  NOTE: this version contains zero em dashes, by request.
--->
+<img width="2560" height="800" alt="On-Set Studio Banner" src="https://github.com/user-attachments/assets/3fb0e5d7-ecb5-456a-af3f-fbf14c97de82" />
 
 # On-Set Studio
 
@@ -17,7 +11,9 @@ node. You build the shot the way you'd build it on a set: block your cast, rig
 your lights, choose a lens, move the camera. Then it hands ComfyUI the ground
 truth of the scene you actually built.
 
->>> HERO IMAGE / GIF: the editor with a lit, posed scene + the passes it exports <<<
+<div align="center">
+<img width="850" height="275" alt="Banner1-850x275" src="https://github.com/user-attachments/assets/10581776-75b3-42a1-b89c-e7b23b31c701" />
+</div>
 
 ---
 
