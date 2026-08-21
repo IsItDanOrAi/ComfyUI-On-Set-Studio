@@ -249,8 +249,8 @@ two.* This guide assumes you installed it to `C:\dev\ardy`.
 **2. Copy the bridge files** from this repo into your ARDY folder:
 
 ```
-C:\dev\ardy\onset_ardy_server.py     <- On-Set Studio <-> ARDY bridge (FastAPI, port 8765)
-C:\dev\ardy\retarget_ardy.py         <- retargets ARDY motion onto the Mixamo skeleton
+...\ardy\onset_ardy_server.py     <- On-Set Studio <-> ARDY bridge (FastAPI, port 8765)
+...\ardy\retarget_ardy.py         <- retargets ARDY motion onto the Mixamo skeleton
 ```
 
 **3. Generate your rest-pose reference.** Retargeting needs to know your
