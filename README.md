@@ -265,7 +265,7 @@ character's rest pose, so you dump it from the editor once:
 **4. Start the bridge** from ARDY's own Python environment:
 
 ```bash
-cd C:\dev\ardy
+cd C:\...\ardy
 python onset_ardy_server.py
 ```
 
