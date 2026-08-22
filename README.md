@@ -298,8 +298,12 @@ together, get in touch, that's genuinely the fastest route to both.
 On-Set Studio is free to use, and developed by one person. Support is what buys
 the time to keep building it.
 
->>> SPONSOR LINK: github.com/sponsors/<username> <<<
->>> Until the first backer arrives, label it "Be the first to back this" <<<
+Be the first to back this:
+
+<a href="https://github.com/sponsors/IsItDanOrAi">
+  <img alt="Sponsor on GitHub" src="https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-2ea44f?style=for-the-badge" />
+</a>
+
 
 I'm also available for work. If you're hiring in AI filmmaking, virtual
 production, or tooling, I'd like to hear from you.
