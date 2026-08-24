@@ -16,7 +16,6 @@ truth of the scene you actually built.
 </div>
 
 
-
 ---
 
 ## Why it exists
@@ -41,8 +40,6 @@ can build a stage that doesn't have them. I built the stage.
 <div align="center">
 <img width="1200" height="388" alt="Pokerbanner" src="https://github.com/user-attachments/assets/27319277-16b3-4f09-9524-8d1a0bd36ada" />
 </div>
-
->>> IMAGE: side-by-side, the staged scene in the editor to the generated result <<<
 
 ## Why not just use Blender or Unreal?
 
