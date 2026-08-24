@@ -12,8 +12,10 @@ your lights, choose a lens, move the camera. Then it hands ComfyUI the ground
 truth of the scene you actually built.
 
 <div align="center">
-<img width="850" height="275" alt="Banner1-850x275" src="https://github.com/user-attachments/assets/10581776-75b3-42a1-b89c-e7b23b31c701" />
+<img width="1200" height="387" alt="banner" src="https://github.com/user-attachments/assets/2aea7ab5-cc22-4a68-8a14-c4a426e871d0" />
 </div>
+
+
 
 ---
 
@@ -34,6 +36,11 @@ lighting. Your lens. Your camera move.
 
 I built it because I needed it. You can adapt to someone else's limits, or you
 can build a stage that doesn't have them. I built the stage.
+
+
+<div align="center">
+<img width="1200" height="388" alt="Pokerbanner" src="https://github.com/user-attachments/assets/27319277-16b3-4f09-9524-8d1a0bd36ada" />
+</div>
 
 >>> IMAGE: side-by-side, the staged scene in the editor to the generated result <<<
 
@@ -135,9 +142,8 @@ straight into your ComfyUI workflow.
 ## Generate original motion, ARDY integration
 
 <div align="center">
-<img width="850" height="275" alt="ARDY v5" src="https://github.com/user-attachments/assets/7d86bfb2-2281-47e7-9be9-deb5bfe68239" />
+<img width="1200" height="388" alt="Ardybanner" src="https://github.com/user-attachments/assets/dd672d8d-32f6-4bc4-9ce4-67ae74d139df" />
 </div>
-
 
 On-Set Studio integrates **[ARDY](https://github.com/nv-tlabs/ardy)**, NVIDIA's
 autoregressive motion diffusion model, published at
