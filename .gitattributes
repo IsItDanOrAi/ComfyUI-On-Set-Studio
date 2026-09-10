@@ -1,0 +1,44 @@
+# .gitattributes for the ComfyUI-On-Set-Studio node repository.
+#
+# ORDER MATTERS HERE, AND NOT THE WAY YOU WOULD EXPECT.
+# In .gitattributes the LAST matching line wins. A catch-all at the bottom
+# silently overrides every specific rule above it, which is exactly what the
+# first version of this file did. So the general rule goes FIRST and the
+# exceptions come after. Check any change with:
+#
+#     git check-attr text -- editor_dist/index.html
+#
+# It should report "text: unset" for anything under editor_dist. If it says
+# "text: auto", a rule below has taken over and the build is being rewritten.
+
+# General case: normalise to LF in the repository, which is the portable
+# choice, and let each machine check out whatever suits it.
+* text=auto
+
+# ---------------------------------------------------------------------------
+# EXCEPTIONS, which must come after the line above to have any effect.
+# ---------------------------------------------------------------------------
+
+# THE SHIPPED BUILD. Delivered byte for byte as built.
+#
+# Windows git defaults to storing LF and handing out CRLF. For source that is
+# invisible and fine. For a compiled editor it means what somebody downloads
+# is not quite what was built and tested. JavaScript and CSS do not care
+# about line endings today, and "does not matter today" is a thin reason to
+# let a build artefact change in transit.
+editor_dist/** -text
+
+# Binary formats wherever they appear. Git usually detects these on its own;
+# saying so removes the "usually".
+*.fbx    binary
+*.glb    binary
+*.gltf   binary
+*.bin    binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.ico    binary
+*.webp   binary
+*.mp4    binary
+*.ply    binary
+*.zip    binary

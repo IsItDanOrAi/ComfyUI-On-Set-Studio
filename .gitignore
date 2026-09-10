@@ -1,0 +1,94 @@
+# .gitignore for the ComfyUI-On-Set-Studio NODE repository.
+#
+# NOT the same file as the one in C:\dev\on-set-studio. That one is for the
+# source project and is full of rules for node_modules, Vite output, pytest
+# caches and Python packaging, none of which exist here. This folder holds a
+# Python node, a web extension and a prebuilt editor, and nothing else.
+#
+# ===========================================================================
+# THE SAFETY NET, and the reason this file matters more than a normal one
+# ===========================================================================
+#
+# On-Set Studio ships as a build. The source is deliberately not published.
+#
+# Git history is permanent. If source ever lands in a commit here, removing it
+# later does not remove it: it stays in the history, in every clone, and in
+# GitHub's cache. There is no undo for that.
+#
+# So this file blocks the source tree outright. If a stray copy of src/ or a
+# package.json ends up in this folder while moving files around, git will
+# refuse to see it rather than quietly committing it.
+#
+# If you ever DO decide to publish source, delete this block deliberately.
+# Do not delete it to make a commit work.
+
+/src/
+/node_modules/
+/public/
+/tools/
+/package.json
+/package-lock.json
+/yarn.lock
+/pnpm-lock.yaml
+/tsconfig*.json
+/vite.config.*
+# ROOT index.html only. editor_dist/index.html is the editor itself and MUST
+# ship, so this pattern is anchored with a leading slash. Without it, git
+# ignores index.html at every level and the editor never loads.
+/index.html
+*.ts
+*.tsx
+
+# ===========================================================================
+
+# Compiled Python. Regenerates on import, is specific to the interpreter
+# version that made it, and can actively confuse a machine running a
+# different one.
+__pycache__/
+*.py[cod]
+
+# Runtime output. nodes.py creates this directory itself on import
+# (os.makedirs(_PAYLOAD_DIR, exist_ok=True)), so it does not need to exist in
+# the repo and will appear on first run.
+#
+# It holds whatever was last sent from the editor: the payload JSON, the
+# manifest, and every rendered frame. That is your work, sometimes hundreds
+# of megabytes of it, and it has no meaning on anybody else's machine.
+payloads/
+
+# Working documents, kept out of the distribution on purpose.
+# LICENSING-NOTES.md records how NOTICE.md was built and why. It is for
+# whoever maintains the project, not for a user reading the terms.
+LICENSING-NOTES.md
+collect-licences.ps1
+licences-dump.txt
+
+# Build analysis output.
+stats.html
+
+# The dist privacy check and its output. Both stay local.
+#
+# The report is a snapshot of one build, so it is stale the moment you
+# rebuild, and it works by quoting whatever it found, which means a finding
+# it reports is a finding it publishes.
+#
+# The script stays out too. A loose .bat called "check privacy" sitting in a
+# download makes people wonder what needed checking. It is a maintenance
+# tool, and the repo reads better without it.
+check-dist-privacy.bat
+dist-privacy-report.txt
+
+# The character models are the user's own, downloaded from Mixamo under
+# Adobe's terms. models-README.txt explains where to put them and DOES ship;
+# the rigs themselves never do.
+editor_dist/models/*.fbx
+editor_dist/models/*.FBX
+editor_dist/models/*.glb
+editor_dist/models/*.gltf
+
+# Editor and OS noise.
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

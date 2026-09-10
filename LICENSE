@@ -1,0 +1,27 @@
+On-Set Studio
+Copyright (c) 2026 Dan Oravasaari. All rights reserved.
+
+On-Set Studio is distributed as a compiled build. No licence is granted to
+copy, modify, redistribute, sublicense, sell, reverse engineer, or create
+derivative works from it, in whole or in part.
+
+You may use the build for your own work, personal or commercial, and keep
+whatever you make with it. The images, video, control passes and JSON it
+produces are yours. This licence restricts the software, not its output.
+
+Portions of On-Set Studio derive from open-pose-editor and remain under the
+MIT licence. See LICENSE-open-pose-editor.
+
+Other third-party components are bundled in the build under their own
+licences. See NOTICE.
+
+If you want the source, want a feature, or want to work together, get in
+touch.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
