@@ -9,6 +9,14 @@ You may use the build for your own work, personal or commercial, and keep
 whatever you make with it. The images, video, control passes and JSON it
 produces are yours. This licence restricts the software, not its output.
 
+EXCEPTION: THE ARDY BRIDGE SCRIPTS
+
+The files in the ardy folder are distributed as source rather than as a
+build, because they run inside ARDY's own Python environment and cannot be
+compiled ahead of time. You may read them, and you may modify your own copy
+to suit your installation. They remain subject to the same restriction on
+redistribution as the rest of this software.
+
 Portions of On-Set Studio derive from open-pose-editor and remain under the
 MIT licence. See LICENSE-open-pose-editor.
 
