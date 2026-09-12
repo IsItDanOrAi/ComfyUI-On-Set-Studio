@@ -271,21 +271,28 @@ model checkpoints. *Note: NVIDIA tests ARDY on Ubuntu 22.04. It runs on
 Windows, but you're off their tested path, so expect to solve a dependency or
 two.* This guide assumes you installed it to `C:\dev\ardy`.
 
-**2. Copy the bridge files** from this repo into your ARDY folder:
+**2. Copy the bridge files.** Take all three files from this repo's
+[`ardy`](ardy) folder and drop them into your ARDY folder, beside ARDY's own
+scripts. They must stay together in one directory.
 
 ```
-...\ardy\onset_ardy_server.py     <- On-Set Studio <-> ARDY bridge (FastAPI, port 8765)
+...\ardy\onset_ardy_server.py     <- the On-Set Studio bridge (FastAPI, port 8765)
 ...\ardy\retarget_ardy.py         <- retargets ARDY motion onto the Mixamo skeleton
+...\ardy\mixamo_rest.json         <- the Mixamo skeleton's rest pose
 ```
 
-**3. Generate your rest-pose reference.** Retargeting needs to know your
-character's rest pose, so you dump it from the editor once:
+**3. Nothing, if you're using a standard Mixamo character.** The included
+`mixamo_rest.json` describes the standard Mixamo skeleton, which is what X Bot,
+Y Bot and anything from Mixamo's auto-rigger at default proportions are.
 
-- Load your character and make sure it's at a **fresh T-pose** (reload the
-  editor if you've been posing).
-- Open the browser console and run: `copy(ipDumpRestPose())`
-- Paste the result into a file named `mixamo_rest.json`, saved next to the two
-  scripts above (`C:\dev\ardy\mixamo_rest.json`).
+Only regenerate it if your character has **non-standard proportions**, such as
+a converted Unreal or Blender rig. Retargeting reads the hips height from that
+file to convert ARDY's metres into your rig's centimetres, so a mismatch makes
+the character stride wrong, hover or sink. To regenerate: load your character
+at a **fresh T-pose** (reload the editor if you've been posing), open the
+browser console, run `copy(ipDumpRestPose())`, and paste the result over
+`mixamo_rest.json`. There's a fuller explanation in the `ardy` folder's own
+README.
 
 **4. Start the bridge** from ARDY's own Python environment:
 
