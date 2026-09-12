@@ -4,8 +4,10 @@ On-Set Studio
 Copyright (c) 2026 Dan Oravasaari. All rights reserved.
 
 On-Set Studio is distributed as a compiled build. Its own source code is not
-included in this distribution and is not licensed for redistribution. See
-LICENSE.
+included in this distribution and is not licensed for redistribution, with
+one exception: the ARDY bridge scripts in the `ardy` folder ship as source,
+because they run inside ARDY's own Python environment and cannot be compiled
+ahead of time. See LICENSE.
 
 This build incorporates the third-party components listed below. Each remains
 governed by its own licence, and those licences are reproduced in full further
