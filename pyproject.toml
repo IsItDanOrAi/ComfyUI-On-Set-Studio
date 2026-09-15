@@ -1,0 +1,44 @@
+[project]
+# The registry's globally unique id for this node pack. Lowercase, hyphenated,
+# and permanent once published, so it is worth being sure before the first
+# publish. It does NOT have to match the repository name, but matching keeps
+# things findable.
+name = "comfyui-on-set-studio"
+
+# Shown on the registry listing and in ComfyUI-Manager's search results. This
+# is the sentence that decides whether somebody clicks, so it leads with what
+# the tool is rather than how it works.
+description = "A virtual soundstage for ComfyUI. Block your cast, rig your lights, choose a lens and move the camera, then hand ComfyUI the ground truth of the scene you actually built."
+
+version = "1.0.0"
+
+license = { file = "LICENSE" }
+
+# Deliberately empty, and accurate.
+#
+# Everything nodes.py imports is either the Python standard library or already
+# shipped with ComfyUI: numpy, torch, PIL, aiohttp, folder_paths and
+# server.PromptServer. cv2 and imageio are imported lazily inside a single
+# function, are tried in sequence, and are only reached when the Plate Cache
+# node is handed a video_path rather than an image batch. Neither is needed to
+# install or run anything.
+#
+# Do not add them "to be safe". Listing an optional dependency forces it on
+# every user and is exactly how custom nodes end up fighting each other's pip
+# requirements.
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/IsItDanOrAi/ComfyUI-On-Set-Studio"
+
+[tool.comfy]
+# FILL THIS IN BEFORE PUBLISHING.
+# Create an account at registry.comfy.org, make a publisher, and copy the id
+# from your profile. It is the part after the @ sign.
+PublisherId = ""
+
+DisplayName = "On-Set Studio"
+
+# Optional. A URL to a square image for the registry listing. The logo card
+# would work well here. Leave empty if you would rather not bother.
+Icon = ""
