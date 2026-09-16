@@ -35,10 +35,10 @@ Repository = "https://github.com/IsItDanOrAi/ComfyUI-On-Set-Studio"
 # FILL THIS IN BEFORE PUBLISHING.
 # Create an account at registry.comfy.org, make a publisher, and copy the id
 # from your profile. It is the part after the @ sign.
-PublisherId = "@isitdanorai"
+PublisherId = "isitdanorai"
 
 DisplayName = "On-Set Studio"
 
 # Optional. A URL to a square image for the registry listing. The logo card
 # would work well here. Leave empty if you would rather not bother.
-Icon = ""
+Icon = "https://github.com/IsItDanOrAi/ComfyUI-On-Set-Studio/blob/main/editor_dist/icons/icon-512x512.png"
