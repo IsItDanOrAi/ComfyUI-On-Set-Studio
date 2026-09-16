@@ -41,4 +41,4 @@ DisplayName = "On-Set Studio"
 
 # Optional. A URL to a square image for the registry listing. The logo card
 # would work well here. Leave empty if you would rather not bother.
-Icon = "https://github.com/IsItDanOrAi/ComfyUI-On-Set-Studio/blob/main/editor_dist/icons/icon-512x512.png"
+Icon = "https://github.com/IsItDanOrAi/ComfyUI-On-Set-Studio/blob/main/editor_dist/icons/icon-384x384.png"
