@@ -10,9 +10,25 @@ came from.
 
 ---
 
+## 1.0.1
+
+**Build: editor-v354 / app-v60**, unchanged from 1.0.0.
+
+No change to the software. This release exists only to correct the listing on
+the ComfyUI Registry.
+
+### Fixed
+
+- The icon on the Registry listing was oversized.
+- The build string recorded for 1.0.0 in this file said `editor-v353`. The
+  build that actually shipped was `editor-v354`. Corrected, because that
+  string is how a bug report maps to a release.
+
+---
+
 ## 1.0.0
 
-**Build: editor-v353 / app-v60**
+**Build: editor-v354 / app-v60**
 
 First public release.
 
