@@ -294,7 +294,9 @@ def generate(req: GenReq):
                 by_frame = {}
                 for w in wps:
                     try:
-                        f = float(w["f"]); x = float(w["x"]); z = float(w["z"])
+                        f = float(w["f"])
+                        x = float(w["x"])
+                        z = float(w["z"])
                         h = float(w["h"]) if w.get("h") is not None else None
                     except (KeyError, TypeError, ValueError):
                         raise ValueError(f"bad waypoint {w!r} (need f, x, z)")
@@ -329,7 +331,8 @@ def generate(req: GenReq):
                 root_idx = sk.root_idx
                 for g in grs:
                     try:
-                        gf = float(g["f"]); hand = str(g["hand"]).upper()
+                        gf = float(g["f"])
+                        hand = str(g["hand"]).upper()
                         hx = float(g["x"]) / cm_per_m
                         hy = float(g["y"]) / cm_per_m
                         hz = float(g["z"]) / cm_per_m
@@ -368,7 +371,8 @@ def generate(req: GenReq):
                 root_idx = sk.root_idx
                 for ft in fts:
                     try:
-                        ff = float(ft["f"]); side = str(ft["foot"]).upper()
+                        ff = float(ft["f"])
+                        side = str(ft["foot"]).upper()
                         fx = float(ft["x"]) / cm_per_m
                         fy = float(ft["y"]) / cm_per_m
                         fz = float(ft["z"]) / cm_per_m
