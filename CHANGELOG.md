@@ -10,16 +10,40 @@ came from.
 
 ---
 
+## 1.0.2
+
+**Build: editor-v354 / app-v60**, unchanged since 1.0.0.
+
+No change to the software. A listing fix, and the one 1.0.1 was supposed to be.
+
+### Fixed
+
+- The Registry icon. 1.0.1 pointed at a URL that did not resolve, so the
+  oversized icon stayed. The limit is 400x400 and square; the listing now uses
+  the 384x384 icon rather than the 512x512 one, which was the original fault.
+
+### Changed
+
+- The Registry listing description now names the output passes, so somebody
+  skimming the ComfyUI-Manager node browser can tell what the tool does
+  without already knowing. The longer description still lives in the README.
+- Declared `requires-python = ">=3.9"`, verified by parsing `nodes.py` under
+  3.9 rules rather than assumed.
+- Declared the node as OS independent. No GPU accelerator is claimed, because
+  the GPU requirement belongs to the browser running the editor, not to this
+  package.
+
+---
+
 ## 1.0.1
 
 **Build: editor-v354 / app-v60**, unchanged from 1.0.0.
 
-No change to the software. This release exists only to correct the listing on
-the ComfyUI Registry.
+No change to the software. An attempt at the Registry icon that did not take:
+the URL it pointed at did not resolve. Superseded by 1.0.2.
 
 ### Fixed
 
-- The icon on the Registry listing was oversized.
 - The build string recorded for 1.0.0 in this file said `editor-v353`. The
   build that actually shipped was `editor-v354`. Corrected, because that
   string is how a bug report maps to a release.
