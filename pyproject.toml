@@ -10,7 +10,7 @@ name = "comfyui-on-set-studio"
 # the tool is rather than how it works.
 description = "A virtual soundstage for ComfyUI. Block your cast, rig your lights, choose a lens and move the camera, then hand ComfyUI the ground truth of the scene you actually built."
 
-version = "1.0.0"
+version = "1.0.1"
 
 license = { file = "LICENSE" }
 
