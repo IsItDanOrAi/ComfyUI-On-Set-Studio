@@ -5,14 +5,27 @@
 # things findable.
 name = "comfyui-on-set-studio"
 
-# Shown on the registry listing and in ComfyUI-Manager's search results. This
-# is the sentence that decides whether somebody clicks, so it leads with what
-# the tool is rather than how it works.
-description = "A virtual soundstage for ComfyUI. Block your cast, rig your lights, choose a lens and move the camera, then hand ComfyUI the ground truth of the scene you actually built."
+# Shown on the registry listing and in ComfyUI-Manager's search results.
+#
+# Written for a SKIMMER, not for somebody who already cares. It names the
+# outputs on purpose: depth, normal, canny and OpenPose are words a ComfyUI
+# user recognises instantly, and reading them is what makes the tool click.
+# "Virtual soundstage" is a better line, and it belongs in the README where
+# there is room to earn it. A listing has a different job: be recognised.
+#
+# FRONT-LOADED because the Manager truncates. Assume only the first sixty
+# characters survive on a narrow window, and say what it is before the comma.
+description = "A browser-based 3D scene editor for ComfyUI. Pose Mixamo characters, build the set, rig lights and work the camera, then export aligned depth, normal, canny, OpenPose and BBOX passes with scene JSON."
 
-version = "1.0.1"
+version = "1.0.2"
 
 license = { file = "LICENSE" }
+
+# nodes.py parses cleanly under Python 3.9 rules: no match statements, no
+# X | Y annotations, nothing newer than f-strings. Checked, not guessed.
+# Setting this floor higher than it needs to be would lock out users for
+# nothing.
+requires-python = ">=3.9"
 
 # Deliberately empty, and accurate.
 #
@@ -28,17 +41,25 @@ license = { file = "LICENSE" }
 # requirements.
 dependencies = []
 
+# The node itself is pure Python and runs anywhere ComfyUI does. The GPU
+# requirement belongs to the BROWSER running the editor, not to this package,
+# so no accelerator classifier is claimed here.
+classifiers = ["Operating System :: OS Independent"]
+
 [project.urls]
 Repository = "https://github.com/IsItDanOrAi/ComfyUI-On-Set-Studio"
 
 [tool.comfy]
-# FILL THIS IN BEFORE PUBLISHING.
-# Create an account at registry.comfy.org, make a publisher, and copy the id
-# from your profile. It is the part after the @ sign.
+# The id from the registry profile page. NOTE: WITHOUT the @ sign. Including
+# it fails the publish with "Failed to validate token", which reads like a
+# credential problem and is not one.
 PublisherId = "isitdanorai"
 
 DisplayName = "On-Set Studio"
 
-# Optional. A URL to a square image for the registry listing. The logo card
-# would work well here. Leave empty if you would rather not bother.
-Icon = "https://github.com/IsItDanOrAi/ComfyUI-On-Set-Studio/blob/main/editor_dist/icons/icon-384x384.png"
+# The registry's stated limits: SVG, PNG, JPG or GIF, MAXIMUM 400x400, and
+# square. icon-384x384.png fits with 16 pixels to spare.
+#
+# The 512x512 in the same folder does NOT fit, and pointing at it is what
+# produced the oversized listing on 1.0.0.
+Icon = "https://raw.githubusercontent.com/IsItDanOrAi/ComfyUI-On-Set-Studio/refs/heads/main/editor_dist/icons/icon-384x384.png"
